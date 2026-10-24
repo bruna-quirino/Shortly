@@ -1,0 +1,438 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f9fc;
+    color: #172033;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e8eaf0;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 28px;
+    color: #5b5ff0;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a {
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    color: #687086;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #5b5ff0;
+    background: #f1f1ff;
+}
+
+.nav-links a.active {
+    color: #5b5ff0;
+    background: #eeeeff;
+}
+
+
+/* =========================
+   HERO / INÍCIO
+========================= */
+
+#inicio {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    scroll-margin-top: 80px;
+}
+
+#inicio > span,
+#recursos > span,
+#sobre > span {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #eeeeff;
+
+    color: #5b5ff0;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+#inicio h2 {
+    max-width: 750px;
+
+    font-size: clamp(40px, 6vw, 64px);
+
+    line-height: 1.1;
+
+    margin-bottom: 24px;
+
+    color: #172033;
+}
+
+#inicio p {
+    max-width: 550px;
+
+    margin-bottom: 40px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #687086;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+#shortenForm {
+    width: 100%;
+    max-width: 760px;
+
+    text-align: left;
+}
+
+#shortenForm label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #343b4f;
+}
+
+#shortenForm > div {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe2ea;
+
+    border-radius: 14px;
+
+    box-shadow: 0 10px 30px rgba(30, 35, 50, 0.08);
+
+    transition: 0.2s ease;
+}
+
+#shortenForm > div:focus-within {
+    border-color: #5b5ff0;
+
+    box-shadow: 0 10px 35px rgba(91, 95, 240, 0.15);
+}
+
+#shortenForm input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 16px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 16px;
+
+    color: #172033;
+}
+
+#shortenForm input::placeholder {
+    color: #9aa1b2;
+}
+
+#shortenForm button {
+    padding: 0 28px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #5b5ff0;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#shortenForm button:hover {
+    background: #494dd8;
+
+    transform: translateY(-1px);
+}
+
+#shortenForm button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RECURSOS
+========================= */
+
+#recursos {
+    min-height: 100vh;
+
+    padding: 120px 8%;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    scroll-margin-top: 80px;
+}
+
+#recursos h2,
+#sobre h2 {
+    max-width: 700px;
+
+    margin: 0 auto 18px;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    color: #172033;
+}
+
+#recursos > p,
+#sobre > p {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #687086;
+}
+
+.recursos-container {
+    max-width: 1000px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.recurso {
+    padding: 32px;
+
+    text-align: left;
+
+    background: #f8f9fc;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 16px;
+
+    transition: 0.2s ease;
+}
+
+.recurso:hover {
+    transform: translateY(-5px);
+
+    border-color: #5b5ff0;
+
+    box-shadow: 0 15px 35px rgba(30, 35, 50, 0.08);
+}
+
+.recurso h3 {
+    margin-bottom: 12px;
+
+    font-size: 20px;
+
+    color: #172033;
+}
+
+.recurso p {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #687086;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+#sobre {
+    min-height: 70vh;
+
+    padding: 120px 8%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #f8f9fc;
+
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+
+        padding: 8px 10px;
+    }
+
+    nav h1 {
+        font-size: 24px;
+    }
+
+    #inicio {
+        padding: 60px 20px;
+    }
+
+    #inicio h2 {
+        font-size: 40px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    #shortenForm > div {
+        flex-direction: column;
+
+        padding: 8px;
+    }
+
+    #shortenForm button {
+        width: 100%;
+
+        padding: 15px;
+    }
+
+    #recursos,
+    #sobre {
+        padding: 80px 20px;
+    }
+
+    #recursos h2,
+    #sobre h2 {
+        font-size: 34px;
+    }
+
+    .recursos-container {
+        grid-template-columns: 1fr;
+
+        margin-top: 40px;
+    }
+
+}
